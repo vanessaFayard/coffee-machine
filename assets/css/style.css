@@ -4,10 +4,6 @@
   display: flex;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -21,9 +17,56 @@ img {
   margin-left: auto;
 }
 
+/* ==========  ANIMATE ========== */
+@keyframes fill-espresso {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 30%;
+  }
+}
+@keyframes fill-long-coffee {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+@keyframes flowing-liquid {
+  0% {
+    height: 0px;
+    top: 0;
+  }
+  80% {
+    height: 200px;
+    top: 0;
+    animation-timing-function: cubic-bezier(1, 1, 1, 1);
+  }
+  100% {
+    height: 0px;
+    top: 200px;
+  }
+}
+@keyframes on-lighting {
+  0% {
+    box-shadow: 0 0 8px #fff, inset 0 0 8px #fff, 0 0 16px #6ddd35, inset 0 0 16px #bcf7a0, 0 0 32px #bcf7a0, inset 0 0 215px #6ddd35;
+  }
+  50% {
+    box-shadow: 0 0 16px #fff, inset 0 0 16px #fff, 0 0 16px #bcf7a0, inset 0 0 16px #bcf7a0, 0 0 32px #bcf7a0, inset 0 0 215px #bcf7a0;
+  }
+  100% {
+    box-shadow: 0 0 8px #fff, inset 0 0 8px #fff, 0 0 16px #6ddd35, inset 0 0 16px #6ddd35, 0 0 32px #6ddd35, inset 0 0 215px #6ddd35;
+  }
+}
 /* ==========  TYPOGRAPHY ========== */
 html {
   font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -44,6 +87,10 @@ h2 {
 .subtitle {
   font-size: 2rem;
   margin-top: 10px;
+}
+
+.item__title {
+  margin: 5px 0;
 }
 
 /* ==========  WEBFONTS ========== */
@@ -140,6 +187,9 @@ h2 {
   height: 15px;
   border-radius: 100%;
 }
+.machine__top__element-2 .machine__top__circle-1[data-light=true] {
+  animation: on-lighting 2s ease infinite;
+}
 .machine__top__element-2 .machine__top__circle-2, .machine__top__element-2 .machine__top__circle-3 {
   background-color: #000000;
   width: 35px;
@@ -154,7 +204,7 @@ h2 {
 }
 .machine__top__element-2 .machine__top__rectangle-1 {
   background-color: #ffffff;
-  border-radius: 30px;
+  border-radius: 60px;
   height: 45px;
   width: 120px;
 }
@@ -163,6 +213,7 @@ h2 {
   background-color: #DBDBDB;
   height: 310px;
   width: 370px;
+  position: relative;
 }
 
 .machine__middle__distrib {
@@ -190,6 +241,7 @@ h2 {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
+  position: relative;
 }
 .machine__middle__distrib .machine__distrib__pourer-1, .machine__middle__distrib .machine__distrib__pourer-2 {
   background-color: #000000;
@@ -197,6 +249,7 @@ h2 {
   height: 15px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  z-index: 6;
 }
 
 .machine__bottom {
@@ -206,6 +259,87 @@ h2 {
 }
 
 /* ==========  CUP ========== */
+.main__cup {
+  width: 160px;
+  height: 170px;
+  -webkit-clip-path: inset(0 160px 0px 160px round 0px 0px 60px 60px);
+          clip-path: inset(0 160px 0px 160px round 0px 0px 60px 60px);
+  background: #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 80px);
+}
+
+.main__cup__border {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 160px;
+  height: 170px;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 80px);
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  border-bottom: 28px solid #ffffff;
+  z-index: 30;
+}
+
+.main__cup__liquid {
+  width: 130px;
+  height: 130px;
+  -webkit-clip-path: inset(0 130px 0px 130px round 0px 0px 60px 60px);
+          clip-path: inset(0 130px 0px 130px round 0px 0px 60px 60px);
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 65px);
+  z-index: 28;
+}
+.main__cup__liquid[data-choice=espresso] {
+  background: linear-gradient(0deg, #2B1007 60%, transparent 40%);
+  animation: fill-espresso 5s ease forwards;
+  animation-delay: 2s;
+  background-size: 250% 250%;
+}
+.main__cup__liquid[data-choice=americano] {
+  background: linear-gradient(0deg, #2B1007 60%, transparent 40%);
+  animation: fill-lfong-coffee 9s ease forwards;
+  animation-delay: 2s;
+  background-size: 250% 250%;
+}
+.main__cup__liquid[data-choice=latte] {
+  background: linear-gradient(0deg, #AC794A 60%, transparent 40%);
+  animation: fill-long-coffee 9s ease forwards;
+  animation-delay: 2s;
+  background-size: 250% 250%;
+}
+.main__cup__liquid[data-choice=cappuccino] {
+  background: linear-gradient(0deg, #533312 0%, #E7C8A6 35%, #AC794A 60%, transparent 40%);
+  animation: fill-long-coffee 9s ease forwards;
+  animation-delay: 2s;
+  background-size: 250% 250%;
+}
+
+/* ==========  LIQUID ========== */
+.liquid {
+  position: absolute;
+  width: 15px;
+  z-index: 5;
+  margin-left: 5px;
+  margin-top: 13px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.liquid[data-flowing=true] {
+  animation: flowing-liquid 6s ease;
+}
+
+.liquid-coffee {
+  background-color: #2B1007;
+}
+
+.liquid-milk {
+  background-color: #E7C8A6;
+}
+
 /* ========== MENU ========== */
 .menu__board {
   background-color: #2B1007;
@@ -246,6 +380,9 @@ h2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 25px;
+}
+.menu__list .menu__item:hover {
+  cursor: pointer;
 }
 
 /* ==========  COUNTER ========== */

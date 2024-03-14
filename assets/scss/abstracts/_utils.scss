@@ -1,14 +1,9 @@
 /* ==========  UTILS ========== */
 $sm: 576px;
-$container-sm: 540px;
 $md: 768px;
-$container-md: 720px;
 $lg: 992px;
-$container-lg: 960px;
 $xl: 1200px;
-$container-xl: 1140px;
 $xxl: 1400px;
-$container-xxl: 1320px;
 
 // @media screen and (max-width: $sm) {
 // @media screen and (min-width: $sm) and (max-width: $lg) {
@@ -16,10 +11,6 @@ $container-xxl: 1320px;
 
 .d-flex {
     display: flex;
-}
-
-* {
-    box-sizing: border-box;
 }
 
 img {
@@ -35,10 +26,5 @@ img {
     margin-left: auto;
 }
 
-// @media (min-width: $xl) {
-//     .container {
-//         max-width: $container-xl;
-//     }
-// }
 
 
