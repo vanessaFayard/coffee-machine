@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     coffeeChoice.forEach(coffeChoice => {
         coffeChoice.addEventListener('click', () => {
             const choice = coffeChoice.dataset.type;
-            console.log(mainCup.dataset.choice);
+
             // check if a coffee is served and initialize
             if(mainCup.dataset.choice === "empty") {
                 indicatorLight.dataset.light = true;
@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 mainCup.dataset.choice = choice;
 
-                console.log(mainCup.dataset.choice);
                 // check when animation 'fill' end
                 mainCup.addEventListener('animationend', (e) => {
                 indicatorLight.dataset.light = false;
