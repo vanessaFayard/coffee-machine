@@ -43,4 +43,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
+
+    // hover menu item behavior without link <a>
+    .menu__item:hover {
+        cursor: pointer;
+    }
 }
+
+

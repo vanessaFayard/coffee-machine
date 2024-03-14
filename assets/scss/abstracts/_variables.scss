@@ -1,7 +1,6 @@
 /* ==========  VARIABLES ========== */
-
 $color--coffee--1:      #2B1007;
-$color--coffee--2:      #754C21;
+$color--coffee--2:      #533312;
 $color--coffee--3:      #AC794A;
 $color--coffee--4:      #E7C8A6;
 $color--beige:          #070401;
@@ -9,13 +8,20 @@ $color--beige--light:   #FFF5EA;
 $color--grey--light:    #DBDBDB;
 $color--grey:           #D1D1D1;
 $color--green--dark:    #34370F;
+$color--green--neon-1:    #6ddd35;
+$color--green--neon-2:    #bcf7a0;
 $color--yellow:          #F5C40A;
 $color--red:             #F5420A;
 $color--white:          #ffffff;
 $color--black:          #000000;
 
 $border-radius-1:         20px;
-$border-radius-2:         30px;
+$border-radius-2:         60px;
+
+$cup--width:            160px;
+$cup--height:           170px;
+$cup--liquid--width:    $cup--width - 30px;
+$cup--liquid--height:   $cup--height - 40px;
 
 
 $font-family-title: 'Karantina';

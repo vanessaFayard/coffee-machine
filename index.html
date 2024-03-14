@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffe Machine</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
 </head>
 <body>
     <section class="main">
         <div class="d-lg-none">
-            <img class="plant plant-1" src="assets/img/plant.png" alt="plant">
+            <img class="plant plant-1" src="assets/img/plant.png" alt="">
         </div>
         <div class="main__left">
             <div class="machine">
                 <div class="machine__top">
                     <div class="machine__top__element-1"></div>
                     <div class="machine__top__element-2">
-                        <div class="machine__top__circle-1"></div>
+                        <div id="indicatorLight" data-light="false" class="machine__top__circle-1"></div>
                         <div class="machine__top__rectangle-1"></div>
                         <div class="machine__top__element-2-buttons">
                             <div class="machine__top__circle-2"></div>
@@ -29,9 +30,18 @@
                         <div class="machine__distrib__top"></div>
                         <div class="machine__distrib__middle"></div>
                         <div class="machine__distrib__pourer">
-                            <div class="machine__distrib__pourer-1"></div>
-                            <div class="machine__distrib__pourer-2"></div>                            
+                            <div class="machine__distrib__pourer-1">
+                                <div id="liquidCoffee" data-flowing="false" class="liquid-coffee liquid"></div>
+                            </div>
+                            <div class="machine__distrib__pourer-2">
+                                <div id="liquidMilk" data-flowing="false" class="liquid-milk liquid"></div>
+                            </div>                            
                         </div>
+                    </div>
+                    <div class="machine__middle__cup">
+                        <div class="main__cup__border"></div>
+                        <div id="mainCup" data-choice="empty" class="main__cup__liquid"></div>
+                        <div class="main__cup"></div>
                     </div>
                 </div>
                 <div class="machine__bottom"></div>
@@ -48,21 +58,29 @@
                         <h2>Coffe Menu</h2>
                         <p class="subtitle">Choice our favorite coffee</p>
                         <div class="menu__list">
-                            <div class="menu__item menu__item-1">
-                                <div class="cup"></div>
-                                <p class="cup__title">Espresso</p>
+                            <div data-type="espresso" class="menu__item menu__item-1">
+                                <div class="cup">
+                                    <img src="assets/img/espresso.png" alt="">
+                                </div>
+                                <p class="item__title">Espresso</p>
                             </div>
-                            <div class="menu__item menu__item-2">
-                                <div class="cup"></div>
-                                <p class="cup__title">Americano</p>
+                            <div data-type="americano" class="menu__item menu__item-2">
+                                <div class="cup">
+                                    <img src="assets/img/americano.png" alt="">
+                                </div>
+                                <p class="item__title">Americano</p>
                             </div>
-                            <div class="menu__item menu__item-3">
-                                <div class="cup"></div>
-                                <p class="cup__title">Latte</p>
+                            <div data-type="latte" class="menu__item menu__item-3">
+                                <div class="cup">
+                                    <img src="assets/img/latte.png" alt="">
+                                </div>
+                                <p class="item__title">Latte</p>
                             </div>
-                            <div class="menu__item menu__item-4">
-                                <div class="cup"></div>
-                                <p class="cup__title">Cappuccino</p>
+                            <div data-type="cappuccino" class="menu__item menu__item-4">
+                                <div class="cup">
+                                    <img src="assets/img/cappuccino.png" alt="">
+                                </div>
+                                <p class="item__title">Cappuccino</p>
                             </div>
                         </div>
                         <div class="menu__responsive">
@@ -74,8 +92,8 @@
             </div>
         </div>
         <div class="plants">
-            <img class="plant plant-2" src="assets/img/plant-2.png" alt="plant">
-            <img class="plant plant-3" src="assets/img/plant-3.png" alt="plant">
+            <img class="plant plant-2" src="assets/img/plant-2.png" alt="">
+            <img class="plant plant-3" src="assets/img/plant-3.png" alt="">
         </div>
     </section>
     <section class="bar">
@@ -86,6 +104,5 @@
             </div>
         </div>
     </section>
-    <script src="assets/js/script.js"></script>
 </body>
 </html>
