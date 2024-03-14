@@ -1,0 +1,36 @@
+/* ========== PAGE ========== */
+body {
+    background-color: $color--beige--light;
+    // background-image: url(../img/background-coffee-beans.svg);
+    background-blend-mode: hard-light;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main {
+    width: 100vw;
+    height: 75vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 80px;
+}
+.bar {
+    width: 100vw;
+    height: 25vh;
+}
+
+.menu__responsive {
+    display: none;
+}
+
+@media (max-width: $md) {
+    .main__left,  .menu__paper .menu__list {
+        display: none;
+    }
+
+    .menu__responsive {
+        display: block;
+    }
+
+}
