@@ -1,0 +1,100 @@
+/* ========== MACHINE ========== */
+.machine {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.machine__top__element-1, .machine__top__element-2, .machine__bottom {
+    background-color: $color--yellow;
+}
+.machine__top__element-1 {
+    height: 75px;
+    width: 400px;
+    border-top-left-radius: $border-radius-1;
+    border-top-right-radius: $border-radius-1;
+    border-bottom: 0px;
+    margin: 0 auto;
+}
+.machine__top__element-2 {
+    height: 155px;
+    width:450px;
+    border-radius: $border-radius-1;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+
+    .machine__top__circle-1 {
+        background-color: $color--red;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+    }
+    .machine__top__circle-2, .machine__top__circle-3 {
+        background-color: $color--black;
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+    }
+    .machine__top__element-2-buttons {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        gap: 15px;
+    }
+
+    .machine__top__rectangle-1 {
+        background-color: $color--white;
+        border-radius: $border-radius-2;
+        height: 45px;
+        width: 120px;
+    }
+}
+.machine__middle {
+    background-color: $color--grey--light;
+    height: 310px;
+    width: 370px;
+}
+.machine__middle__distrib {
+    background-color: $color--grey;
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+
+    .machine__distrib__top, .machine__distrib__middle {
+        background-color: $color--black;
+        border-bottom-left-radius: $border-radius-1;
+        border-bottom-right-radius: $border-radius-1;
+    }
+    .machine__distrib__top {
+        height: 25px;
+    }
+    .machine__distrib__middle {
+        height: 60px;
+        width: 70%;
+        margin: 0 auto;
+    }
+    .machine__distrib__pourer {
+        width: 65%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    .machine__distrib__pourer-1, .machine__distrib__pourer-2 {
+        background-color: $color--black;
+        width: 25px;
+        height: 15px;
+        border-bottom-left-radius: $border-radius-1; 
+        border-bottom-right-radius: $border-radius-1; 
+    }
+}
+.machine__bottom {
+    height: 90px;
+    width: 450px;
+    border-radius: $border-radius-1;
+}

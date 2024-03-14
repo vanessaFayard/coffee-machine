@@ -1,0 +1,32 @@
+
+/* ==========  PLANTS ========== */
+.plants {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    position: absolute;
+    right: 20%;
+
+    .plant {
+        max-width: 120px;
+    }
+}
+
+.plant {
+    margin-bottom: -10px;
+    position: relative;
+    z-index: 1;
+}
+
+.plant-1 {
+    max-width: 230px;
+}
+
+@media (max-width: $xxl) {
+    .d-lg-none {
+        display: none;
+    }
+    .plants {
+        right: 250px;
+    }
+}

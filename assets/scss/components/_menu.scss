@@ -1,0 +1,46 @@
+/* ========== MENU ========== */
+.menu__board {
+    background-color: $color--coffee--1;
+    border-radius: $border-radius-1;
+    padding: 20px;
+    display: flex;
+    position: relative;
+    margin-bottom: 80px;
+
+    width: 350px;
+    height: 485px;
+
+    .menu__tong {
+        position: absolute;
+        top: -20px;
+        left: calc(50% - 60px);
+        
+        .menu__tong__element-1, .menu__tong__element-2 {
+            background-color: $color--grey;
+        }
+        .menu__tong__element-1 {
+            width: 25px;
+            height: 30px;
+            margin: 0 auto;
+        }
+        .menu__tong__element-2 {
+            width: 120px;
+            height: 30px;
+        }
+    }
+}
+
+
+
+.menu__paper {
+    text-align: center;
+    background-color: $color--beige--light;
+    width: 100%;
+    height: 100%;
+}
+
+.menu__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}

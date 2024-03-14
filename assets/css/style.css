@@ -1,0 +1,334 @@
+/* ==========  VARIABLES ========== */
+/* ==========  UTILS ========== */
+.d-flex {
+  display: flex;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 90vw;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* ==========  TYPOGRAPHY ========== */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: "Barlow Condensed";
+  margin: 0;
+}
+
+h1, h2, h3, .title {
+  font-family: "Karantina";
+}
+
+h2 {
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+
+.subtitle {
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+/* ==========  WEBFONTS ========== */
+/* karantina-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Karantina";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../webfonts/karantina/karantina-v11-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* karantina-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Karantina";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../webfonts/karantina/karantina-v11-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* karantina-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Karantina";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../webfonts/karantina/karantina-v11-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-condensed-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../webfonts/barlow/barlow-condensed-v12-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-condensed-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../webfonts/barlow/barlow-condensed-v12-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-condensed-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../webfonts/barlow/barlow-condensed-v12-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-condensed-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../webfonts/barlow/barlow-condensed-v12-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* ========== MACHINE ========== */
+.machine {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.machine__top__element-1, .machine__top__element-2, .machine__bottom {
+  background-color: #F5C40A;
+}
+
+.machine__top__element-1 {
+  height: 75px;
+  width: 400px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom: 0px;
+  margin: 0 auto;
+}
+
+.machine__top__element-2 {
+  height: 155px;
+  width: 450px;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+}
+.machine__top__element-2 .machine__top__circle-1 {
+  background-color: #F5420A;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+}
+.machine__top__element-2 .machine__top__circle-2, .machine__top__element-2 .machine__top__circle-3 {
+  background-color: #000000;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+}
+.machine__top__element-2 .machine__top__element-2-buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  gap: 15px;
+}
+.machine__top__element-2 .machine__top__rectangle-1 {
+  background-color: #ffffff;
+  border-radius: 30px;
+  height: 45px;
+  width: 120px;
+}
+
+.machine__middle {
+  background-color: #DBDBDB;
+  height: 310px;
+  width: 370px;
+}
+
+.machine__middle__distrib {
+  background-color: #D1D1D1;
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+}
+.machine__middle__distrib .machine__distrib__top, .machine__middle__distrib .machine__distrib__middle {
+  background-color: #000000;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.machine__middle__distrib .machine__distrib__top {
+  height: 25px;
+}
+.machine__middle__distrib .machine__distrib__middle {
+  height: 60px;
+  width: 70%;
+  margin: 0 auto;
+}
+.machine__middle__distrib .machine__distrib__pourer {
+  width: 65%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+.machine__middle__distrib .machine__distrib__pourer-1, .machine__middle__distrib .machine__distrib__pourer-2 {
+  background-color: #000000;
+  width: 25px;
+  height: 15px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.machine__bottom {
+  height: 90px;
+  width: 450px;
+  border-radius: 20px;
+}
+
+/* ==========  CUP ========== */
+/* ========== MENU ========== */
+.menu__board {
+  background-color: #2B1007;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  position: relative;
+  margin-bottom: 80px;
+  width: 350px;
+  height: 485px;
+}
+.menu__board .menu__tong {
+  position: absolute;
+  top: -20px;
+  left: calc(50% - 60px);
+}
+.menu__board .menu__tong .menu__tong__element-1, .menu__board .menu__tong .menu__tong__element-2 {
+  background-color: #D1D1D1;
+}
+.menu__board .menu__tong .menu__tong__element-1 {
+  width: 25px;
+  height: 30px;
+  margin: 0 auto;
+}
+.menu__board .menu__tong .menu__tong__element-2 {
+  width: 120px;
+  height: 30px;
+}
+
+.menu__paper {
+  text-align: center;
+  background-color: #FFF5EA;
+  width: 100%;
+  height: 100%;
+}
+
+.menu__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+/* ==========  COUNTER ========== */
+.bar__furniture {
+  position: relative;
+  z-index: 3;
+}
+
+.bar__counter {
+  background-color: #2B1007;
+  border-radius: 20px;
+  width: 100%;
+  height: 110px;
+}
+
+.bar__base {
+  background-color: #2B1007;
+  width: 85%;
+  margin: 0 auto;
+  height: calc(25vh - 110px);
+}
+
+/* ==========  PLANTS ========== */
+.plants {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  position: absolute;
+  right: 20%;
+}
+.plants .plant {
+  max-width: 120px;
+}
+
+.plant {
+  margin-bottom: -10px;
+  position: relative;
+  z-index: 1;
+}
+
+.plant-1 {
+  max-width: 230px;
+}
+
+@media (max-width: 1400px) {
+  .d-lg-none {
+    display: none;
+  }
+  .plants {
+    right: 250px;
+  }
+}
+/* ========== PAGE ========== */
+body {
+  background-color: #FFF5EA;
+  background-blend-mode: hard-light;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main {
+  width: 100vw;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 80px;
+}
+
+.bar {
+  width: 100vw;
+  height: 25vh;
+}
+
+.menu__responsive {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .main__left, .menu__paper .menu__list {
+    display: none;
+  }
+  .menu__responsive {
+    display: block;
+  }
+}/*# sourceMappingURL=style.css.map */
