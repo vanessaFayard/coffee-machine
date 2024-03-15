@@ -301,7 +301,7 @@ h2 {
 }
 .main__cup__liquid[data-choice=americano] {
   background: linear-gradient(0deg, #2B1007 60%, transparent 40%);
-  animation: fill-lfong-coffee 9s ease forwards;
+  animation: fill-long-coffee 9s ease forwards;
   animation-delay: 2s;
   background-size: 250% 250%;
 }
@@ -337,7 +337,7 @@ h2 {
 }
 
 .liquid-milk {
-  background-color: #E7C8A6;
+  background-color: #FFF5EA;
 }
 
 /* ========== MENU ========== */
